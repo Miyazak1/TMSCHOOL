@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online OSSD Courses | TMPS Private High School</title>
+    <meta name="description" content="Browse online Ontario high school credit courses by grade, subject, and pathway." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="topbar" aria-label="School contact information">
+        <a href="tel:+16476939313">(+1) 647-693-9313</a>
+        <a href="mailto:info@tmpsprivatehighschool.com">info@tmpsprivatehighschool.com</a>
+        <span>Scarborough, Ontario</span>
+      </div>
+      <nav class="navbar" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="TMPS Private High School home">
+          <span class="brand-mark">TMPS</span>
+          <span><strong>TMPS Private High School</strong><small>Ontario OSSD Credits</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span>Menu</button>
+        <div class="nav-links" id="nav-links">
+          <a href="courses.html" aria-current="page">Courses</a>
+          <a href="admissions.html">Admissions</a>
+          <a href="international-students.html">International Students</a>
+          <a href="about.html">About</a>
+          <a class="nav-cta" href="contact.html">Contact Us</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero courses-hero">
+        <div>
+          <p class="eyebrow">Course Catalogue</p>
+          <h1>Find the right OSSD credit course</h1>
+          <p>Search representative Grade 9-12 online courses by grade, subject, and pathway. Course planning can be confirmed through admissions before registration.</p>
+        </div>
+      </section>
+
+      <section class="section courses-section standalone" id="courses" aria-labelledby="courses-title">
+        <div class="section-heading">
+          <p class="eyebrow">Browse Courses</p>
+          <h2 id="courses-title">Online Ontario high school credits</h2>
+          <p>Each card highlights the course code, pathway, subject, and prerequisite so families can scan quickly.</p>
+        </div>
+        <div class="course-controls" aria-label="Course filters">
+          <label>Grade<select id="grade-filter"><option value="all">All grades</option></select></label>
+          <label>Subject<select id="subject-filter"><option value="all">All subjects</option></select></label>
+          <label>Pathway<select id="pathway-filter"><option value="all">All pathways</option></select></label>
+        </div>
+        <p class="course-result-count" id="course-result-count" aria-live="polite"></p>
+        <div class="course-grid" id="course-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="cta-band">
+        <div>
+          <p class="eyebrow">Need Course Advice?</p>
+          <h2>Send us your target program and timeline.</h2>
+          <p>An advisor can help confirm prerequisite fit and course sequencing.</p>
+        </div>
+        <a class="button primary" href="contact.html">Ask Admissions <span aria-hidden="true">-></span></a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand"><a class="brand" href="index.html"><span class="brand-mark">TMPS</span><span><strong>TMPS Private High School</strong><small>Ontario OSSD Credits</small></span></a><p>Online OSSD credit pathways for Grade 9-12 students, families, and international learners.</p></div>
+        <div class="footer-links"><h3>Explore</h3><a href="courses.html">Courses</a><a href="admissions.html">Admissions</a><a href="international-students.html">International Students</a><a href="about.html">About</a></div>
+        <div class="footer-links"><h3>Contact</h3><a href="tel:+16476939313">(+1) 647-693-9313</a><a href="mailto:info@tmpsprivatehighschool.com">info@tmpsprivatehighschool.com</a><span>Scarborough, Ontario</span></div>
+        <div class="footer-cta"><h3>Need course advice?</h3><p>Share your grade, target course, and timeline with admissions.</p><a class="button primary" href="contact.html">Contact Admissions</a></div>
+      </div>
+      <div class="footer-bottom"><span>Copyright © 2026 TMPS Private High School.</span><a href="index.html">Back to home</a></div>
+    </footer>
+
+    <div class="mobile-contact" aria-label="Quick contact">
+      <a href="tel:+16476939313">Call</a>
+      <a href="mailto:info@tmpsprivatehighschool.com">Email</a>
+      <a href="courses.html">Courses</a>
+    </div>
+
+    <dialog class="course-modal" id="course-modal" aria-labelledby="modal-title">
+      <button class="modal-close" type="button" aria-label="Close course details">x</button>
+      <p class="eyebrow" id="modal-code"></p>
+      <h2 id="modal-title"></h2>
+      <p id="modal-summary"></p>
+      <dl>
+        <div><dt>Grade</dt><dd id="modal-grade"></dd></div>
+        <div><dt>Subject</dt><dd id="modal-subject"></dd></div>
+        <div><dt>Pathway</dt><dd id="modal-pathway"></dd></div>
+        <div><dt>Prerequisite</dt><dd id="modal-prerequisite"></dd></div>
+      </dl>
+      <a class="button primary" id="modal-contact" href="contact.html">Ask About This Course</a>
+    </dialog>
+    <script src="script.js"></script>
+  </body>
+</html>
